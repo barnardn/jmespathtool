@@ -11,6 +11,7 @@
 		211776622B15630800121E92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211776612B15630800121E92 /* ContentView.swift */; };
 		211776642B15630900121E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776632B15630900121E92 /* Assets.xcassets */; };
 		211776672B15630900121E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776662B15630900121E92 /* Preview Assets.xcassets */; };
+		211776702B15636600121E92 /* JMESPath in Frameworks */ = {isa = PBXBuildFile; productRef = 2117766F2B15636600121E92 /* JMESPath */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				211776702B15636600121E92 /* JMESPath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = jmespathtool;
+			packageProductDependencies = (
+				2117766F2B15636600121E92 /* JMESPath */,
+			);
 			productName = jmespathtool;
 			productReference = 2117765C2B15630800121E92 /* jmespathtool.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 211776532B15630800121E92;
+			packageReferences = (
+				2117766E2B15636600121E92 /* XCRemoteSwiftPackageReference "jmespath" */,
+			);
 			productRefGroup = 2117765D2B15630800121E92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2117766E2B15636600121E92 /* XCRemoteSwiftPackageReference "jmespath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adam-fowler/jmespath.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2117766F2B15636600121E92 /* JMESPath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2117766E2B15636600121E92 /* XCRemoteSwiftPackageReference "jmespath" */;
+			productName = JMESPath;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 211776542B15630800121E92 /* Project object */;
 }

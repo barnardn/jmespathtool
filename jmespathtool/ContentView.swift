@@ -1,19 +1,40 @@
-//
-//  ContentView.swift
-//  jmespathtool
-//
-//  Created by Norman Barnard on 11/27/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var query: String = ""
+    @State private var jsonInput: String = ""
+    @State private var queryOutput: String = ""
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Form {
+            HStack {
+                TextField("Query:", text: $query)
+                Button(
+                    "Execute",
+                    action: {}
+                )
+            }
+            HStack {
+                GroupBox("JSON Input") {
+                    VStack(alignment: .leading) {
+                        TextEditor(text: $jsonInput)
+                        Button(
+                            "Clipboard",
+                            action: {}
+                        )
+                    }
+                }
+                GroupBox("Query Results") {
+                    VStack(alignment: .leading) {
+                        TextEditor(text: $queryOutput)
+                            .disabled(true)
+                        Button(
+                            "Copy",
+                            action: {}
+                        )
+                    }
+                }
+            }
         }
         .padding()
     }
