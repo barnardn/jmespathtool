@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		211776602B15630800121E92 /* jmespathtoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117765F2B15630800121E92 /* jmespathtoolApp.swift */; };
+		211776602B15630800121E92 /* JMSEPathToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117765F2B15630800121E92 /* JMSEPathToolApp.swift */; };
 		211776622B15630800121E92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211776612B15630800121E92 /* ContentView.swift */; };
 		211776642B15630900121E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776632B15630900121E92 /* Assets.xcassets */; };
 		211776672B15630900121E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776662B15630900121E92 /* Preview Assets.xcassets */; };
@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		2117765C2B15630800121E92 /* jmespathtool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jmespathtool.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2117765F2B15630800121E92 /* jmespathtoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jmespathtoolApp.swift; sourceTree = "<group>"; };
+		2117765F2B15630800121E92 /* JMSEPathToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMSEPathToolApp.swift; sourceTree = "<group>"; };
 		211776612B15630800121E92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		211776632B15630900121E92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211776662B15630900121E92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		2117765E2B15630800121E92 /* jmespathtool */ = {
 			isa = PBXGroup;
 			children = (
-				2117765F2B15630800121E92 /* jmespathtoolApp.swift */,
+				2117765F2B15630800121E92 /* JMSEPathToolApp.swift */,
 				211776612B15630800121E92 /* ContentView.swift */,
 				211776632B15630900121E92 /* Assets.xcassets */,
 				211776682B15630900121E92 /* jmespathtool.entitlements */,
@@ -78,6 +78,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2117766B2B15630900121E92 /* Build configuration list for PBXNativeTarget "jmespathtool" */;
 			buildPhases = (
+				211776712B16B66B00121E92 /* Lint source */,
 				211776582B15630800121E92 /* Sources */,
 				211776592B15630800121E92 /* Frameworks */,
 				2117765A2B15630800121E92 /* Resources */,
@@ -142,13 +143,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		211776712B16B66B00121E92 /* Lint source */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Lint source";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/scripts/linting.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		211776582B15630800121E92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				211776622B15630800121E92 /* ContentView.swift in Sources */,
-				211776602B15630800121E92 /* jmespathtoolApp.swift in Sources */,
+				211776602B15630800121E92 /* JMSEPathToolApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +309,7 @@
 				DEVELOPMENT_TEAM = FA5W6TJ34U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +337,7 @@
 				DEVELOPMENT_TEAM = FA5W6TJ34U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

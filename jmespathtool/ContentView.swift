@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var query: String = ""
-    @State private var jsonInput: String = ""
-    @State private var queryOutput: String = ""
+    @State private var query = ""
+    @State private var jsonInput = ""
+    @State private var queryOutput = ""
 
     var body: some View {
         Form {
@@ -11,7 +11,7 @@ struct ContentView: View {
                 TextField("Query:", text: $query)
                 Button(
                     "Execute",
-                    action: {}
+                    action: { }
                 )
             }
             HStack {
@@ -20,7 +20,7 @@ struct ContentView: View {
                         TextEditor(text: $jsonInput)
                         Button(
                             "Clipboard",
-                            action: {}
+                            action: { }
                         )
                     }
                 }
@@ -30,7 +30,7 @@ struct ContentView: View {
                             .disabled(true)
                         Button(
                             "Copy",
-                            action: {}
+                            action: { }
                         )
                     }
                 }
