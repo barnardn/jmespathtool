@@ -11,8 +11,8 @@
 		211776622B15630800121E92 /* QueryRunnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211776612B15630800121E92 /* QueryRunnerView.swift */; };
 		211776642B15630900121E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776632B15630900121E92 /* Assets.xcassets */; };
 		211776672B15630900121E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776662B15630900121E92 /* Preview Assets.xcassets */; };
-		213E52C02B16C1E7004D723E /* JMESPathClient in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52BF2B16C1E7004D723E /* JMESPathClient */; };
 		213E52C22B1808C7004D723E /* QueryRunnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */; };
+		213E52C52B1815FC004D723E /* JMESPathClient in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52C42B1815FC004D723E /* JMESPathClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213E52C02B16C1E7004D723E /* JMESPathClient in Frameworks */,
+				213E52C52B1815FC004D723E /* JMESPathClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			);
 			name = jmespathtool;
 			packageProductDependencies = (
-				213E52BF2B16C1E7004D723E /* JMESPathClient */,
+				213E52C42B1815FC004D723E /* JMESPathClient */,
 			);
 			productName = jmespathtool;
 			productReference = 2117765C2B15630800121E92 /* jmespathtool.app */;
@@ -387,7 +387,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		213E52BF2B16C1E7004D723E /* JMESPathClient */ = {
+		213E52C42B1815FC004D723E /* JMESPathClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JMESPathClient;
 		};

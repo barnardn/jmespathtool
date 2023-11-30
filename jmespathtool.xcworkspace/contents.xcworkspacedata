@@ -5,6 +5,6 @@
       location = "container:jmespathtool.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../.Trash/Modules">
+      location = "group:Modules">
    </FileRef>
 </Workspace>
