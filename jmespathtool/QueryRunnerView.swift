@@ -1,32 +1,30 @@
 import SwiftUI
 
-struct ContentView: View {
-    @State private var query = ""
-    @State private var jsonInput = ""
-    @State private var queryOutput = ""
+struct QueryRunnerView: View {
+    @State private var model = QueryRunnerViewModel()
 
     var body: some View {
         Form {
             HStack {
-                TextField("Query:", text: $query)
+                TextField("Query:", text: $model.queryString)
                 Button(
                     "Execute",
-                    action: { }
+                    action: { model.runQuery() }
                 )
             }
             HStack {
                 GroupBox("JSON Input") {
                     VStack(alignment: .leading) {
-                        TextEditor(text: $jsonInput)
+                        TextEditor(text: $model.jsonInput)
                         Button(
                             "Clipboard",
-                            action: { }
+                            action: { model.jsonFromClipboard() }
                         )
                     }
                 }
                 GroupBox("Query Results") {
                     VStack(alignment: .leading) {
-                        TextEditor(text: $queryOutput)
+                        TextEditor(text: $model.queryResults)
                             .disabled(true)
                         Button(
                             "Copy",
@@ -41,5 +39,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    QueryRunnerView()
 }

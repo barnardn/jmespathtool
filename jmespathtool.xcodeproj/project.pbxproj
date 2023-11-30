@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		211776602B15630800121E92 /* JMSEPathToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117765F2B15630800121E92 /* JMSEPathToolApp.swift */; };
-		211776622B15630800121E92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211776612B15630800121E92 /* ContentView.swift */; };
+		211776622B15630800121E92 /* QueryRunnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211776612B15630800121E92 /* QueryRunnerView.swift */; };
 		211776642B15630900121E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776632B15630900121E92 /* Assets.xcassets */; };
 		211776672B15630900121E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776662B15630900121E92 /* Preview Assets.xcassets */; };
 		213E52C02B16C1E7004D723E /* JMESPathClient in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52BF2B16C1E7004D723E /* JMESPathClient */; };
+		213E52C22B1808C7004D723E /* QueryRunnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2117765C2B15630800121E92 /* jmespathtool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jmespathtool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2117765F2B15630800121E92 /* JMSEPathToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMSEPathToolApp.swift; sourceTree = "<group>"; };
-		211776612B15630800121E92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		211776612B15630800121E92 /* QueryRunnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRunnerView.swift; sourceTree = "<group>"; };
 		211776632B15630900121E92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211776662B15630900121E92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		211776682B15630900121E92 /* jmespathtool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jmespathtool.entitlements; sourceTree = "<group>"; };
+		213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRunnerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				2117765F2B15630800121E92 /* JMSEPathToolApp.swift */,
-				211776612B15630800121E92 /* ContentView.swift */,
+				211776612B15630800121E92 /* QueryRunnerView.swift */,
+				213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */,
 				211776632B15630900121E92 /* Assets.xcassets */,
 				211776682B15630900121E92 /* jmespathtool.entitlements */,
 				211776652B15630900121E92 /* Preview Content */,
@@ -177,7 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211776622B15630800121E92 /* ContentView.swift in Sources */,
+				211776622B15630800121E92 /* QueryRunnerView.swift in Sources */,
+				213E52C22B1808C7004D723E /* QueryRunnerViewModel.swift in Sources */,
 				211776602B15630800121E92 /* JMSEPathToolApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
