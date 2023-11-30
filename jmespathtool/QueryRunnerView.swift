@@ -28,7 +28,7 @@ struct QueryRunnerView: View {
                             .disabled(true)
                         Button(
                             "Copy",
-                            action: { }
+                            action: { model.addResultsToClipboard() }
                         )
                     }
                 }

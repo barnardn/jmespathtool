@@ -25,6 +25,7 @@ let package = Package(
     products: [
         // Helpers
         .library(name: "JMESPathClient", targets: ["JMESPathClient"]),
+        .library(name: "AppKitTools", targets: ["AppKitTools"]),
     ],
     dependencies: [
         .package(url: "https://github.com/adam-fowler/jmespath.swift", from: "1.0.2"),
@@ -40,6 +41,12 @@ let package = Package(
             name: "JMESPathClient",
             dependencies: [
                 .jmespath,
+                .dependencies,
+            ]
+        ),
+        .target(
+            name: "AppKitTools",
+            dependencies: [
                 .dependencies,
             ]
         ),

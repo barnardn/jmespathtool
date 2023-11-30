@@ -13,6 +13,7 @@
 		211776672B15630900121E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776662B15630900121E92 /* Preview Assets.xcassets */; };
 		213E52C22B1808C7004D723E /* QueryRunnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */; };
 		213E52C52B1815FC004D723E /* JMESPathClient in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52C42B1815FC004D723E /* JMESPathClient */; };
+		213E52C72B18263F004D723E /* AppKitTools in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52C62B18263F004D723E /* AppKitTools */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213E52C52B1815FC004D723E /* JMESPathClient in Frameworks */,
+				213E52C72B18263F004D723E /* AppKitTools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +103,7 @@
 			name = jmespathtool;
 			packageProductDependencies = (
 				213E52C42B1815FC004D723E /* JMESPathClient */,
+				213E52C62B18263F004D723E /* AppKitTools */,
 			);
 			productName = jmespathtool;
 			productReference = 2117765C2B15630800121E92 /* jmespathtool.app */;
@@ -390,6 +393,10 @@
 		213E52C42B1815FC004D723E /* JMESPathClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JMESPathClient;
+		};
+		213E52C62B18263F004D723E /* AppKitTools */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppKitTools;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

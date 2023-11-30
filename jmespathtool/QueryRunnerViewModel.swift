@@ -1,3 +1,4 @@
+import AppKitTools
 import Dependencies
 import Foundation
 import JMESPathClient
@@ -10,6 +11,8 @@ import SwiftUI
 
     @ObservationIgnored
     @Dependency(\.jmesPathClient) var jmesPathClient
+    @ObservationIgnored
+    @Dependency(\.pasteboardClient) var pasteboardClient
 
     init() { }
 
@@ -23,8 +26,10 @@ import SwiftUI
     }
 
     public func jsonFromClipboard() {
-        // TODO: probably not the best way to use pasteboard
-        let json = NSPasteboard.general.pasteboardItems?.first?.string(forType: .string)
-        jsonInput = json ?? ""
+        jsonInput = pasteboardClient.firstString() ?? ""
+    }
+
+    public func addResultsToClipboard() {
+        pasteboardClient.addString(queryResults)
     }
 }

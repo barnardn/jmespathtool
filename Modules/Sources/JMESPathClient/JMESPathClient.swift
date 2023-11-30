@@ -23,7 +23,7 @@ extension JMESPathClient: DependencyKey {
 
 extension JMESPathClient: TestDependencyKey {
     public static var testValue = JMESPathClient(
-        query: { _, _ in unimplemented("JMESPathClient::query", placeholder: nil) }
+        query: unimplemented("JMESPathClient::query", placeholder: nil)
     )
     public static var previewValue = JMESPathClient(
         query: { _, _ in nil }
