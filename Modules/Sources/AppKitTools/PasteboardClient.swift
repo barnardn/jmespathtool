@@ -19,15 +19,11 @@ public struct PasteboardClient {
 }
 
 extension PasteboardClient: DependencyKey {
-    private static var pasteboard: NSPasteboard {
-        let pb = NSPasteboard.general
-        pb.declareTypes([.string], owner: nil)
-        return pb
-    }
-
     public static var liveValue = PasteboardClient(
-        firstString: { pasteboard.string(forType: .string) },
-        addString: { str in pasteboard.setString(str, forType: .string) }
+        firstString: {
+            NSPasteboard.general.string(forType: .string)
+        },
+        addString: { str in NSPasteboard.general.setString(str, forType: .string) }
     )
 }
 

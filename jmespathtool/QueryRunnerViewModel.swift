@@ -1,6 +1,7 @@
 import AppKitTools
 import Dependencies
 import Foundation
+import FoundationTools
 import JMESPathClient
 import SwiftUI
 
@@ -8,6 +9,7 @@ import SwiftUI
     var queryString = ""
     var jsonInput = ""
     var queryResults = ""
+    var errorMessage = ""
 
     @ObservationIgnored
     @Dependency(\.jmesPathClient) var jmesPathClient
@@ -21,15 +23,26 @@ import SwiftUI
         do {
             queryResults = try jmesPathClient.query(queryString, jsonInput) ?? ""
         } catch {
-            print("bummer \(error)")
+            errorMessage = "Invalid query syntax"
         }
     }
 
     public func jsonFromClipboard() {
-        jsonInput = pasteboardClient.firstString() ?? ""
+        guard
+            let pbString = pasteboardClient.firstString(),
+            let jsonStr = pbString.asPrettyPrintedJson
+        else {
+            jsonInput = ""
+            return
+        }
+        jsonInput = jsonStr
     }
 
     public func addResultsToClipboard() {
         pasteboardClient.addString(queryResults)
+    }
+
+    public func clearErrorMessage() {
+        errorMessage = ""
     }
 }

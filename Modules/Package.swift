@@ -6,9 +6,10 @@ import PackageDescription
 // MARK: - Dependency Convenience
 extension Target.Dependency {
     // MARK: Internal
+    static var appKitools: Self { "AppKitTools" }
+    static var foundationTools: Self { "FoundationTools" }
 
     // MARK: 3rd Party
-
     static var jmespath: Self {
         .product(name: "JMESPath", package: "jmespath.swift")
     }
@@ -23,9 +24,13 @@ let package = Package(
     name: "Modules",
     platforms: [.macOS(.v14)],
     products: [
-        // Helpers
-        .library(name: "JMESPathClient", targets: ["JMESPathClient"]),
+        // MARK: local packages
         .library(name: "AppKitTools", targets: ["AppKitTools"]),
+        .library(name: "FoundationTools", targets: ["FoundationTools"]),
+
+        // MARK: third party libraries
+        .library(name: "JMESPathClient", targets: ["JMESPathClient"]),
+
     ],
     dependencies: [
         .package(url: "https://github.com/adam-fowler/jmespath.swift", from: "1.0.2"),
@@ -42,6 +47,7 @@ let package = Package(
             dependencies: [
                 .jmespath,
                 .dependencies,
+                .foundationTools,
             ]
         ),
         .target(
@@ -49,6 +55,9 @@ let package = Package(
             dependencies: [
                 .dependencies,
             ]
+        ),
+        .target(
+            name: "FoundationTools"
         ),
     ]
 )
