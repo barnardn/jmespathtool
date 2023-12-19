@@ -27,6 +27,12 @@ import SwiftUI
         }
     }
 
+    public func loadSavedQuery(_ query: Query) {
+        errorMessage = ""
+        queryResults = ""
+        self.queryString = query.query
+    }
+
     public func jsonFromClipboard() {
         guard
             let pbString = pasteboardClient.firstString(),

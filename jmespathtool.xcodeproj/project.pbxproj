@@ -7,24 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210B371A2B31DCF10001CF19 /* SavedQueriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210B37192B31DCF10001CF19 /* SavedQueriesViewModel.swift */; };
 		211776602B15630800121E92 /* JMSEPathToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117765F2B15630800121E92 /* JMSEPathToolApp.swift */; };
 		211776622B15630800121E92 /* QueryRunnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211776612B15630800121E92 /* QueryRunnerView.swift */; };
 		211776642B15630900121E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776632B15630900121E92 /* Assets.xcassets */; };
 		211776672B15630900121E92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211776662B15630900121E92 /* Preview Assets.xcassets */; };
+		212F7A6F2B24E35800A40459 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F7A6E2B24E35800A40459 /* Query.swift */; };
+		212F7A712B24E43800A40459 /* QueryPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F7A702B24E43800A40459 /* QueryPersistence.swift */; };
+		212F7A752B25041500A40459 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 212F7A742B25041500A40459 /* Tagged */; };
+		212F7A772B25041500A40459 /* TaggedMoney in Frameworks */ = {isa = PBXBuildFile; productRef = 212F7A762B25041500A40459 /* TaggedMoney */; };
+		212F7A792B25041500A40459 /* TaggedTime in Frameworks */ = {isa = PBXBuildFile; productRef = 212F7A782B25041500A40459 /* TaggedTime */; };
 		213E52C22B1808C7004D723E /* QueryRunnerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */; };
 		213E52C52B1815FC004D723E /* JMESPathClient in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52C42B1815FC004D723E /* JMESPathClient */; };
 		213E52C72B18263F004D723E /* AppKitTools in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52C62B18263F004D723E /* AppKitTools */; };
 		213E52C92B1BDCE7004D723E /* FoundationTools in Frameworks */ = {isa = PBXBuildFile; productRef = 213E52C82B1BDCE7004D723E /* FoundationTools */; };
+		213ED7612B30A2FF00C53DDE /* SavedQueriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213ED7602B30A2FF00C53DDE /* SavedQueriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210B37192B31DCF10001CF19 /* SavedQueriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQueriesViewModel.swift; sourceTree = "<group>"; };
 		2117765C2B15630800121E92 /* jmespathtool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jmespathtool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2117765F2B15630800121E92 /* JMSEPathToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMSEPathToolApp.swift; sourceTree = "<group>"; };
 		211776612B15630800121E92 /* QueryRunnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRunnerView.swift; sourceTree = "<group>"; };
 		211776632B15630900121E92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211776662B15630900121E92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		211776682B15630900121E92 /* jmespathtool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jmespathtool.entitlements; sourceTree = "<group>"; };
+		212F7A6E2B24E35800A40459 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		212F7A702B24E43800A40459 /* QueryPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryPersistence.swift; sourceTree = "<group>"; };
 		213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryRunnerViewModel.swift; sourceTree = "<group>"; };
+		213ED7602B30A2FF00C53DDE /* SavedQueriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQueriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +45,10 @@
 			files = (
 				213E52C92B1BDCE7004D723E /* FoundationTools in Frameworks */,
 				213E52C52B1815FC004D723E /* JMESPathClient in Frameworks */,
+				212F7A752B25041500A40459 /* Tagged in Frameworks */,
 				213E52C72B18263F004D723E /* AppKitTools in Frameworks */,
+				212F7A772B25041500A40459 /* TaggedMoney in Frameworks */,
+				212F7A792B25041500A40459 /* TaggedTime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,12 +75,16 @@
 		2117765E2B15630800121E92 /* jmespathtool */ = {
 			isa = PBXGroup;
 			children = (
+				212F7A722B24E43D00A40459 /* Services */,
+				212F7A6D2B24E33C00A40459 /* Models */,
 				2117765F2B15630800121E92 /* JMSEPathToolApp.swift */,
 				211776612B15630800121E92 /* QueryRunnerView.swift */,
 				213E52C12B1808C7004D723E /* QueryRunnerViewModel.swift */,
 				211776632B15630900121E92 /* Assets.xcassets */,
 				211776682B15630900121E92 /* jmespathtool.entitlements */,
 				211776652B15630900121E92 /* Preview Content */,
+				213ED7602B30A2FF00C53DDE /* SavedQueriesView.swift */,
+				210B37192B31DCF10001CF19 /* SavedQueriesViewModel.swift */,
 			);
 			path = jmespathtool;
 			sourceTree = "<group>";
@@ -77,6 +95,22 @@
 				211776662B15630900121E92 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		212F7A6D2B24E33C00A40459 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				212F7A6E2B24E35800A40459 /* Query.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		212F7A722B24E43D00A40459 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				212F7A702B24E43800A40459 /* QueryPersistence.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		213E52BE2B16C1E7004D723E /* Frameworks */ = {
@@ -107,6 +141,9 @@
 				213E52C42B1815FC004D723E /* JMESPathClient */,
 				213E52C62B18263F004D723E /* AppKitTools */,
 				213E52C82B1BDCE7004D723E /* FoundationTools */,
+				212F7A742B25041500A40459 /* Tagged */,
+				212F7A762B25041500A40459 /* TaggedMoney */,
+				212F7A782B25041500A40459 /* TaggedTime */,
 			);
 			productName = jmespathtool;
 			productReference = 2117765C2B15630800121E92 /* jmespathtool.app */;
@@ -120,7 +157,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					2117765B2B15630800121E92 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -137,6 +174,7 @@
 			);
 			mainGroup = 211776532B15630800121E92;
 			packageReferences = (
+				212F7A732B25041500A40459 /* XCRemoteSwiftPackageReference "swift-tagged" */,
 			);
 			productRefGroup = 2117765D2B15630800121E92 /* Products */;
 			projectDirPath = "";
@@ -186,7 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212F7A6F2B24E35800A40459 /* Query.swift in Sources */,
+				212F7A712B24E43800A40459 /* QueryPersistence.swift in Sources */,
+				210B371A2B31DCF10001CF19 /* SavedQueriesViewModel.swift in Sources */,
 				211776622B15630800121E92 /* QueryRunnerView.swift in Sources */,
+				213ED7612B30A2FF00C53DDE /* SavedQueriesView.swift in Sources */,
 				213E52C22B1808C7004D723E /* QueryRunnerViewModel.swift in Sources */,
 				211776602B15630800121E92 /* JMSEPathToolApp.swift in Sources */,
 			);
@@ -229,6 +271,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -292,6 +335,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -322,6 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"jmespathtool/Preview Content\"";
 				DEVELOPMENT_TEAM = FA5W6TJ34U;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -350,6 +395,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"jmespathtool/Preview Content\"";
 				DEVELOPMENT_TEAM = FA5W6TJ34U;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -392,7 +438,33 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		212F7A732B25041500A40459 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-tagged";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		212F7A742B25041500A40459 /* Tagged */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 212F7A732B25041500A40459 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = Tagged;
+		};
+		212F7A762B25041500A40459 /* TaggedMoney */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 212F7A732B25041500A40459 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = TaggedMoney;
+		};
+		212F7A782B25041500A40459 /* TaggedTime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 212F7A732B25041500A40459 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = TaggedTime;
+		};
 		213E52C42B1815FC004D723E /* JMESPathClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JMESPathClient;
