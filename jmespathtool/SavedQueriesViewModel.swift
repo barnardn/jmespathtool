@@ -4,15 +4,16 @@ import SwiftUI
 
 @Observable final class SavedQueriesViewModel {
     private(set) var allQueries: [Query]
-
-    @ObservationIgnored
-    @Dependency(\.queryPersistence) var queryPersistence
+    private(set) var selectedQuery: Query?
 
     init(queries: [Query]) {
-        self.allQueries = queries
+        @Dependency(\.queryPersistence) var queryPersistence
+        let queries = try? queryPersistence.loadAll()
+        self.allQueries = queries ?? []
     }
 
     public func delete(id: Query.ID) {
+        @Dependency(\.queryPersistence) var queryPersistence
         let filtered = allQueries.filter { $0.id != id }
         allQueries = filtered
         do {
@@ -23,6 +24,7 @@ import SwiftUI
     }
 
     public func select(id: Query.ID) {
-        print("user selected \(id)")
+        let selected = allQueries.first { $0.id == id }
+        self.selectedQuery = selected
     }
 }
